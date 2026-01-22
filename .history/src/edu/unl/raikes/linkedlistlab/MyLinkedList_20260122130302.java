@@ -85,16 +85,7 @@ public class MyLinkedList<E> implements List<E> {
 
 	@Override
 	public void add(int index, E element) {
-
-		//TODO
-		if(index == 0){
-			head = new Node(element, head);
-		} else {
-			Node prev = getNode(index - 1);
-			prev.next = new Node(element, prev.next);
-		}
-	
-		size++;
+		// TODO: fill this in
 	}
 
 	@Override
@@ -156,18 +147,7 @@ public class MyLinkedList<E> implements List<E> {
 	@Override
 	public int indexOf(Object target) {
 		// TODO: fill this in
-		Node node = head;
-    int index = 0;
-
-    while (node != null) {
-        if (equals(target, node.cargo)) {
-            return index;
-        }
-        node = node.next;
-        index++;
-    }
-
-    return -1;
+		return -1;
 	}
 
 	/** Checks whether an element of the array is the target.
@@ -221,45 +201,15 @@ public class MyLinkedList<E> implements List<E> {
 
 	@Override
 	public boolean remove(Object obj) {
-		if (head == null) {
-			return false;
-		}  if (equals(obj, head.cargo)) {
-			head = head.next;
-			size--;
-			return true;
-		}
-	
-		Node prev = head;
-	
-		while (prev.next != null) {
-			if (equals(obj, prev.next.cargo)) {
-				prev.next = prev.next.next;
-				size--;
-				return true;
-			}
-			prev = prev.next;
-		}
-	
+		// TODO: fill this in
 		return false;
 	}
 
 	@Override
 	public E remove(int index) {
 		// TODO: fill this in
-		E removed;
-		if (index == 0) {
-			removed = head.cargo;
-			head = head.next;
-		} else {
-			Node prev = getNode(index - 1);
-			removed = prev.next.cargo;
-			prev.next = prev.next.next;
-		}
-	
-		size--;
-		return removed;
-    }
-
+		return null;
+	}
 
 	@Override
 	public boolean removeAll(Collection<?> collection) {
